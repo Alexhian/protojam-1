@@ -1,0 +1,81 @@
+.carrousel-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  text-align: center;
+  @media screen and (min-width: 992px) {
+    width: 40%;
+    justify-content: center;
+    margin: 3rem auto;
+  }
+}
+
+.carrousel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 50px;
+  border-radius: 50px;
+  padding: 4rem;
+  background: #7c988f;
+  box-shadow: 17px 17px 34px #566762, -17px -17px 34px #d0d7d4;
+}
+.carroussel2 {
+  display: flex;
+  align-items: center;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.bouton-precedent,
+.bouton-suivant {
+  background-color: rgba(18, 61, 38, 0.5);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.bouton-precedent:hover,
+.bouton-suivant:hover {
+  background-color: #123d26;
+}
+
+.image-container img {
+  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: x-large;
+  color: white;
+}
+
+.carroussel-button {
+  color: #090909;
+  padding: 0.1em 0.6em;
+  font-size: 18px;
+  border-radius: 0.5em;
+  background: #e8e8e8;
+  cursor: pointer;
+  border: 1px solid #e8e8e8;
+  transition: all 0.3s;
+  box-shadow: 6px 6px 12px #919191, -6px -6px 12px #696969;
+}
+
+.carrousselbutton:active {
+  color: #666;
+  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+}
