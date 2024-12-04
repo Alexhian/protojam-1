@@ -50,8 +50,12 @@ function CarrousselSurvivants() {
   return (
     <>
       <div className="carrousel-container">
-        <h2>CAROUSSEL DES SURVIVANTS </h2>
         <div className="carrousel">
+        <h2>LES SURVIVANTS </h2>
+              <div className="name">
+              <h3>{firstName[currentIndex]}</h3>
+              <h3>{lastName[currentIndex]}</h3>
+              </div>
           <div className="carroussel2">
             <button
               type="button"
@@ -61,8 +65,6 @@ function CarrousselSurvivants() {
               {"<"}
             </button>
             <div className="image-container">
-              <h3>{firstName[currentIndex]}</h3>
-              <h3>{lastName[currentIndex]}</h3>
               <img
                 src={photos[currentIndex]}
                 alt={`Survivant ${currentIndex + 1}`}
@@ -76,8 +78,9 @@ function CarrousselSurvivants() {
               {">"}
             </button>
           </div>
+          <p>Vous le connaissez ?</p>
           <button className="carroussel-button" type="button">
-            ENVOYER UN MESSAGE
+            Contactez-le
           </button>
         </div>
       </div>

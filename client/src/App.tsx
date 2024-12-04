@@ -1,8 +1,8 @@
 import "./App.css";
-// import Mapp from "./components/APIMap";
+import Mapp from "./components/APIMap";
 import CarrousselSurvivants from "./components/CarrousselSurvivants";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
-// import Maps from "./components/Maps";
 import Navbar from "./components/Navbar";
 import Sos from "./components/Sos";
 import Formulaire from "./components/formulaire";
@@ -10,13 +10,19 @@ import Formulaire from "./components/formulaire";
 function App() {
   return (
     <>
-      <Header />
-      <Navbar />
-      <div className="container_components">
+      <header>
+        <Header />
+        <Navbar />
+      </header>
+      <body className="container_components">
         <CarrousselSurvivants />
         <Sos />
         <Formulaire />
-      </div>
+        <Mapp />
+      </body>
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 }

@@ -1,0 +1,22 @@
+.Sos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.Sos-button {
+  border-radius: 59px;
+  color: white;
+  background: linear-gradient(145deg, #cf0606, #ae0505);
+  box-shadow: 21px 21px 42px #7a0404, -21px -21px 42px #efbdbd;
+  padding: 150px;
+  font-family: "Jura", serif;
+  cursor: pointer;
+}
+
+.p {
+  font-size: 7rem;
+  font-weight: 700;
+}

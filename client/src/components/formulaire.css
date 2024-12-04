@@ -5,28 +5,24 @@
   font-style: normal;
 }
 
-.form {
-  width: auto;
-  height: auto;
-  align-self: stretch;
-  justify-self: stretch;
-}
-
 .bloc-formulaire {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: rgb(180, 150, 165);
+  box-shadow: 21px 21px 42px #7a6d7b, -21px -21px 42px #afa1a1;
   border-radius: 30px;
   justify-content: center;
   gap: 15px;
   height: fit-content;
   text-align: center;
   margin: 10px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Jura", serif;
   padding: 15px;
+  font-size: 16px;
   @media screen and (min-width: 992px) {
-    width: 35%;
+    width: 90%;
+    height: 75%;
     justify-content: center;
     margin: auto;
     margin-top: 20px;
@@ -36,11 +32,36 @@
 input,
 textarea {
   width: 100%;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Jura", serif;
   max-width: 200px;
   border-radius: 12px;
 }
 .envoi {
   width: 50px;
   height: 50px;
+}
+
+.envoi-button {
+  display: flex;
+  gap: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 0.2s;
+  padding: 10px 20px;
+  border-radius: 100px;
+  background: #ffffff;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+}
+
+.champs input {
+  border: none;
+  outline: none;
+}
+
+.champs textarea {
+  border: none;
+  outline: none;
 }

@@ -1,19 +1,46 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+:root {
+  background-image: url"client/public/fond.webp";
+  background-color: rgb(160, 160, 160);
+}
+
+.container_components:nth-child(1) {
+  grid-area: survivors;
+}
+
+.container_components:nth-child(2) {
+  grid-area: sos;
+}
+
+.container_components:nth-child(3) {
+  grid-area: signal;
+}
+
+.container_components:nth-child(4) {
+  grid-area: map;
+}
+
 .container_components {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
   gap: 0px 0px;
   grid-template-areas:
-    ". ."
-    ". .";
+    "signal"
+    "sos"
+    "survivors"
+    "map";
+
+  @media screen and (min-width: 992px) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "sos survivors"
+      "signal map";
+  }
 }

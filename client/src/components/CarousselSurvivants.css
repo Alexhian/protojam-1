@@ -3,7 +3,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 40vh;
+  width: 100%;
+  height: auto;
   text-align: center;
   @media screen and (min-width: 992px) {
     width: 40%;
@@ -12,9 +13,17 @@
   }
 }
 
+h2 {
+  font-family: "Jura", serif;
+  font-size: 30px;
+}
+
 .carrousel {
   display: flex;
+  align-items: center;
   flex-direction: column;
+  width: 225%;
+  height: 200%;
   gap: 20px;
   border-radius: 50px;
   border-radius: 50px;
@@ -24,7 +33,9 @@
 }
 .carroussel2 {
   display: flex;
+  justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .image-container {
@@ -32,22 +43,29 @@
   flex-direction: column;
   align-items: center;
   gap: 10px;
+  width: 100%;
+}
+
+
+.image-container img {
+  width: 80%;
+}
+
+p {
+  font-family: "Jura", serif;
 }
 
 .bouton-precedent,
 .bouton-suivant {
-  background-color: rgba(18, 61, 38, 0.5);
+  background-color: rgba(18, 61, 38, 0);
   color: white;
   border: none;
   border-radius: 5px;
   padding: 10px 15px;
   cursor: pointer;
   font-size: 1.2rem;
-}
-
-.bouton-precedent:hover,
-.bouton-suivant:hover {
-  background-color: #123d26;
+  margin: 1rem;
+  font-size: xxx-large;
 }
 
 .image-container img {
@@ -57,7 +75,7 @@
 }
 
 h3 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Jura", serif;
   font-weight: bold;
   font-size: x-large;
   color: white;
@@ -65,17 +83,19 @@ h3 {
 
 .carroussel-button {
   color: #090909;
-  padding: 0.1em 0.6em;
+  width: 200px;
+  padding: 0.1em 1em;
   font-size: 18px;
   border-radius: 0.5em;
-  background: #e8e8e8;
+
   cursor: pointer;
   border: 1px solid #e8e8e8;
   transition: all 0.3s;
-  box-shadow: 6px 6px 12px #919191, -6px -6px 12px #696969;
+  box-shadow: 6px 6px 12px #638375, -6px -6px 12px rgba(99, 157, 142, 0);
+  font-family: "Jura", serif;
 }
 
-.carrousselbutton:active {
-  color: #666;
-  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+.name {
+  display: flex;
+  gap: 0.5rem;
 }

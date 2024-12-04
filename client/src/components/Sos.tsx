@@ -1,7 +1,10 @@
+import "./Sos.css";
+
 function Sos() {
   return (
-    <div>
-      <button type="button">S.O.S</button>
+    <div className="Sos">
+      <h2>ENVOYER UN MESSAGE GEOLOCALISE</h2>
+      <button className="Sos-button" type="button"><p className="p">S.O.S</p></button>
     </div>
   );
 }

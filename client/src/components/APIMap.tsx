@@ -1,25 +1,52 @@
-// import React, { useState } from "react";
-// import { MapContainer, Marker, TileLayer } from "react-leaflet";
+import { MapContainer, Marker, TileLayer, Popup } from "react-leaflet";
+import { useState } from "react";
+import "./APIMap.css";
+import L from "leaflet";
 
-// function Mapp() {
-//   const [coordinates, setCoordinates] = useState({ lat: 48.8566, lon: 2.3522 });
+function Mapp() {
+  const initialPosition = [51.505, -0.09];
 
-//   return (
-//     <div>
-//       <h2>Carte </h2>
-//       <MapContainer
-//         center={[coordinates.lat, coordinates.lon]}
-//         zoom={13}
-//         style={{ height: "500px", width: "100%" }}
-//       >
-//         <TileLayer
-//           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-//           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-//         />
-//         <Marker position={[coordinates.lat, coordinates.lon]} />
-//       </MapContainer>
-//     </div>
-//   );
-// }
+  const [markerPosition, setMarkerPosition] = useState(initialPosition);
 
-// export default Mapp;
+  const handleMarkerDrag = (event: L.DragEndEvent) => {
+    const newPosition = event.target.getLatLng();
+    setMarkerPosition([newPosition.lat, newPosition.lng]);
+  };
+
+  const sendLocation = () => {
+    // console.log("La position du marqueur est :", markerPosition);
+  };
+
+  return (
+    <section className="internet-map">
+      <div className="maps">
+        <MapContainer
+          center={initialPosition}
+          zoom={18}
+          style={{ width: "100%", height: "500px" }}
+        >
+          <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+
+          <Marker
+            position={markerPosition}
+            draggable={true}
+            eventHandlers={{
+              dragend: handleMarkerDrag,
+            }}
+          >
+            <Popup>
+              Report !<br />
+              Missing person was last seen here!
+            </Popup>
+          </Marker>
+        </MapContainer>
+      </div>
+
+      <button className="button" type="button" onClick={sendLocation}>
+        Envoyer la localisation
+      </button>
+    </section>
+  );
+}
+
+export default Mapp;
